@@ -7,9 +7,9 @@ if (!($_POST['mbot'])) {
     $to = "your@mail.com";
     $subject = "Error on the webpage";
 
-    $email_content = "Ссылка: $url\n";
-    $email_content .= "Ошибка: $mis\n\n";
-    $email_content .= "Сообщение:\n$comment\n";
+    $email_content = "Adress: $url\n";
+    $email_content .= "Error: $mis\n\n";
+    $email_content .= "Message:\n$comment\n";
 
     $sent = mail($to, $subject, $email_content);
     
