@@ -16,39 +16,39 @@ $(document).ready(function() {
 
               $('input#murl').val(url);
               $('textarea#mmis').val(mis);
-              $('#mistake, #black-back2').fadeIn();
+              $('#mistake, #overlay').fadeIn();
 
           }
       });
-      $('#mclear').click(
+      $('#m-clear').click(
           function(){
-              $('#mistake, #black-back2').fadeOut();
-              $('input#murl').val('');
-              $('textarea#mmis').val('');
-              $('textarea#mmcomment').val('');
+              $('#m-mistake, #m-overlay').fadeOut();
+              $('input#m-url').val('');
+              $('textarea#m-mis').val('');
+              $('textarea#m-comment').val('');
 
           });
 
-      $("#majax").submit(function(){
+      $("#m-ajax").submit(function(){
           var form = $(this);
           var data = form.serialize();
           $.ajax({
               type: 'POST',
-              url: 'errorMailer.php',  //path to your php script
+              url: 'typoMailer.php',  //path to your php script
               data: data,
               beforeSend: function(data) {
                   form.find('input[type="submit"]').attr('disabled', 'disabled');
               },
               complete: function(data) {
                   form.find('input[type="submit"]').prop('disabled', false);
-                  $('#mistake').fadeOut();
-                  $('input#murl').val('');
-                  $('textarea#mmis').val('');
-                  $('textarea#mmcomment').val('');
+                  $('#m-mistake').fadeOut();
+                  $('input#m-url').val('');
+                  $('textarea#m-mis').val('');
+                  $('textarea#m-comment').val('');
 
-                  $('#mthanks').fadeIn();
-                  $('#mthanks').delay(1000).fadeOut();
-                  $('#black-back2').delay(1400).fadeOut();
+                  $('#m-thanks').fadeIn();
+                  $('#m-thanks').delay(1000).fadeOut();
+                  $('#m-overlay').delay(1400).fadeOut();
               }
 
           });

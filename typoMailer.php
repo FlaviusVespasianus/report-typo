@@ -1,5 +1,5 @@
 <?php
-if (!($_POST['mbot'])) {
+if (!($_POST['m-bot'])) {
     $url = $_POST["murl"];
     $mis = $_POST["mmis"];
     $comment = $_POST["mcomment"];

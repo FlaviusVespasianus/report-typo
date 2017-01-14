@@ -1,4 +1,4 @@
-#mistake, #mthanks {
+#m-mistake, #m-mthanks {
   display: none;
   z-index: 9999;
   position: fixed;
@@ -12,11 +12,11 @@
   text-align: left;
   padding: 30px;
 }
-#mthanks p {
+#m-thanks p {
   text-align: center;
   margin: 40px;
 }
-#black-back2 {
+#m-overlay {
   position: fixed;
   top: 0;
   left: 0;
