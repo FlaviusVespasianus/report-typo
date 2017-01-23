@@ -17,19 +17,19 @@ $(document).ready(function() {
 
             $('input#m-url').val(url);
             $('textarea#m-mis').val(mis);
-            $('#mistake').after('<div id="m-overlay"></div>');
+            $('#m-mistake').after('<div id="m-overlay"></div>');
             $('#m-mistake, #m-overlay').fadeIn();
 
         }
     });
     
-    $('.mlink').click(function() {
+    $('.m-link').click(function() {
         var url = window.location;
         var mis = '';
-        $('input#murl').val(url);
-        $('textarea#mmis').val(mis);
-        $('#mistake').after('<div id="m-overlay"></div>');
-        $('#mistake, #m-overlay').fadeIn();
+        $('input#m-url').val(url);
+        $('textarea#m-mis').val(mis);
+        $('#m-mistake').after('<div id="m-overlay"></div>');
+        $('#m-mistake, #m-overlay').fadeIn();
     });
 
     //edit all to val
@@ -48,7 +48,7 @@ $(document).ready(function() {
         var data = form.serialize();
         $.ajax({
             type: 'POST',
-            url: 'typoMailer.php',  //path to your php script
+            url: 'm-module/typoMailer.php',  //path to your php script
             data: data,
             beforeSend: function(data) {
                 form.find('input[type="submit"]').attr('disabled', 'disabled');
@@ -59,18 +59,18 @@ $(document).ready(function() {
                 $('input#m-url').val('');
                 $('textarea#m-mis').val('');
                 $('textarea#m-comment').val('');
-
+                console.log(data);
                 if (data.responseText == 'error1') {
-                    $('#mistake').after('<div id="m-error"><p>Error.<br><br>You have not filled the form!</p></div>');
+                    $('#m-mistake').after('<div id="m-error"><p>Error.<br><br>You have not filled the form!</p></div>');
                     $('#m-error').fadeIn();
                     $('#m-error').delay(2000).fadeOut();
                     var url = window.location;
                     var mis = '';
                     $('input#m-url').val(url);
                     $('textarea#m-mis').val(mis);
-                    $('#mistake').fadeIn();
+                    $('#m-mistake').fadeIn();
                 } else {
-                    $('#mistake').after('<div id="m-thanks"><p>Your message has been sent.<br><br> Thank you!</p></div>');
+                    $('#m-mistake').after('<div id="m-thanks"><p>Your message has been sent.<br><br> Thank you!</p></div>');
                     $('#m-thanks').fadeIn();
                     $('#m-thanks').delay(1000).fadeOut();
                     $('#m-overlay').delay(1300).fadeOut();

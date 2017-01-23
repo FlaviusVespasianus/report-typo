@@ -24,7 +24,7 @@
     </div>
     <br>
     <div class="container">
-        <a class="btn btn-success btn-lg">Nulla erat nibh</a>&nbsp&nbsp
+        <a class="btn btn-success btn-lg m-link">This link will also trigger pop-up window</a>&nbsp&nbsp
         <a class="btn btn-default btn-lg">Proin commodo</a>&nbsp&nbsp
         <a class="btn btn-default btn-lg">Integer imperdiet</a>&nbsp&nbsp
         <a class="btn btn-default btn-lg">Nam consectetur</a>

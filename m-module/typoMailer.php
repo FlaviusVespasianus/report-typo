@@ -1,6 +1,6 @@
 <?php
-if (!($_POST["m-bot"])) {
-    if (($_POST['mcomment']) || ($_POST['mmis'])) {
+if (!isset($_POST["m-bot"])) {
+    if (($_POST['m-comment']) || ($_POST['m-mis'])) {
         $url = $_POST["m-url"];
         $mis = $_POST["m-mis"];
         $comment = $_POST["m-comment"];

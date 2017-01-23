@@ -1,4 +1,4 @@
-#m-mistake, #m-thanks, #merror {
+#m-mistake, #m-thanks, #m-error {
   display: none;
   z-index: 101;
   position: fixed;
