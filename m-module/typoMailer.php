@@ -1,9 +1,9 @@
 <?php
-if (!isset($_POST["m-bot"])) {
-    if (($_POST['m-comment']) || ($_POST['m-mis'])) {
+if (empty($_POST["m-bot"])) {
+    if (!empty($_POST['m-comment']) || !empty($_POST['m-mis'])) {
         $url = $_POST["m-url"];
-        $mis = $_POST["m-mis"];
-        $comment = $_POST["m-comment"];
+        $mis = $_POST["m-mis"] ?? '';
+        $comment = $_POST["m-comment"] ?? '';
 
         $to = "your@mail.com";
         $subject = "Error on the webpage";

@@ -12,10 +12,12 @@
   text-align: left;
   padding: 30px;
 }
-#m-thanks p {
+
+#m-thanks p, #m-error p {
   text-align: center;
   margin: 40px;
 }
+
 #m-overlay {
   position: fixed;
   top: 0;
@@ -28,6 +30,7 @@
   z-index: 100;
   display: none;
 }
+
 .m {
   width: 100%;
   resize: none;

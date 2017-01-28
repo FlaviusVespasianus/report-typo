@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
 
     <title>Lorem Ipsum</title>
-    <?php include('m-module/header.html'); ?>
+    <?php include_once('m-module/header.html'); ?>
     <link rel="stylesheet" href="m-module/styles.css">
     <script src="m-module/typoHandler.js"></script>
 </head>
